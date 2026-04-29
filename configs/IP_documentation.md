@@ -1,21 +1,27 @@
-# IP documetation
+# IP Documentation
 
-## Devices in the topology
+## Devices in the Topology
 
-a. Home_Router
-b. Home_Switch
-c. PC_hm
+### Home Network
+- Home_Router
+- Home_Switch
+- PC_hm
 
-d. Ipersonating-ISP-Router
+### ISP
+- Impersonating_ISP_Router
 
-e. Office_router
-f. Office_switch
-g. PC_off
+### Office Network
+- Office_Router
+- Office_Switch
+- PC_off
 
-## Network subnets
+---
 
-** For home network **: 192.168.10.0/24
-** For Office network **: 192.168.20.0/24
-** For connection between home_router and ISP **: 10.20.30.0/30
-** For connection between office_router and ISP **: 10.20.40.0/30
+## Network Subnets
 
+| Network Description                         | Subnet            |
+|--------------------------------------------|-------------------|
+| Home Network                               | 192.168.10.0/24   |
+| Office Network                             | 192.168.20.0/24   |
+| Home Router ↔ ISP Connection               | 10.20.30.0/30     |
+| Office Router ↔ ISP Connection             | 10.20.40.0/30     |
