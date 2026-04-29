@@ -12,3 +12,6 @@ In the addressing table, R1 and R2 (S0/0/1) are marked as DCE. This means when w
 ```bash
 R1(config)# interface s0/0/0
 R1(config-if)# clock rate 128000
+```
+
+**Note:** When we connect two routers via a serail cable, one end must act as the **"master"** and the other as the **"slave"** regarding the timing of the data transfer. 
