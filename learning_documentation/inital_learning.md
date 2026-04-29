@@ -14,4 +14,41 @@ R1(config)# interface s0/0/0
 R1(config-if)# clock rate 128000
 ```
 
-**Note:** When we connect two routers via a serail cable, one end must act as the **"master"** and the other as the **"slave"** regarding the timing of the data transfer. 
+**Note:** When we connect two routers via a serial cable, one end must act as the **"master"** and the other as the **"slave"** regarding the timing of the data transfer. 
+
+
+## Routing 
+I have set three routers
+- home router
+- ISP router 
+- Office router
+
+One PC is connected to each home and office router.
+
+**Now** for those PCs to ping each other a route has to be set 
+
+ ## On Home_Router:
+  Tell it to send traffic for the Office network to the ISP.
+  ```bash
+```
+  ip route 192.168.20.0 255.255.255.0 10.20.30.1
+  ```
+```
+
+  ## On ISP_Router:
+  The ISP needs to know where both "offices" are located.
+  ```bash
+```
+  ip route 192.168.10.0 255.255.255.0 10.20.30.2
+  ip route 192.168.20.0 255.255.255.0 10.20.40.2
+  ```
+```
+
+  ## On Office_Router:
+  Tell it to send traffic for the Home network back to the ISP.
+```bash
+```
+  ip route 192.168.10.0 255.255.255.0 10.20.40.1
+```
+```
+
